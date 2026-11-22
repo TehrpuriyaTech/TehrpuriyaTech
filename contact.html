@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Tehrpuriya Tech about website development, custom software, design and technical training." />
+  <title>Contact Us | Tehrpuriya Tech</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { navy: '#071B3A', deep: '#041329', orange: '#FF710A', pale: '#FFF2E8' }
+          },
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          boxShadow: { glow: '0 20px 70px rgba(255,113,10,.18)' }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; }
+    h1,h2,h3,.brand-font { font-family: 'Manrope', sans-serif; }
+    .hero-grid { background-image: linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px); background-size: 54px 54px; }
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .orb { background: radial-gradient(circle, rgba(255,113,10,.22), rgba(255,113,10,0) 68%); }
+    .field { width: 100%; border: 1px solid #dbe2ea; border-radius: 12px; background: #fff; padding: 13px 15px; color: #071B3A; outline: none; transition: border-color .2s, box-shadow .2s; }
+    .field:focus { border-color: #FF710A; box-shadow: 0 0 0 3px rgba(255,113,10,.12); }
+    .field::placeholder { color: #94a3b8; }
+  </style>
+</head>
+<body class="bg-white text-slate-800 antialiased">
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-brand-deep/95 text-white backdrop-blur-xl">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-3.5 lg:px-8">
+      <a href="index.html" class="flex items-center gap-3" aria-label="Tehrpuriya Tech home">
+        <img src="assets/logo.png" alt="Tehrpuriya Tech logo" class="h-12 w-12 rounded-xl bg-white object-contain p-1" onerror="this.style.display='none'">
+        <span class="brand-font text-lg font-extrabold tracking-tight">Tehrpuriya <span class="text-brand-orange">Tech</span></span>
+      </a>
+      <div class="hidden items-center gap-8 text-sm font-medium text-slate-200 md:flex">
+        <a class="transition hover:text-brand-orange" href="index.html">Home</a>
+        <a class="transition hover:text-brand-orange" href="about.html">About</a>
+        <a class="transition hover:text-brand-orange" href="services.html">Services</a>
+        <a class="nav-link" href="internship.html">Internship</a>
+        <a class="text-brand-orange" href="contact.html">Contact</a>
+      </div>
+      <a href="#contact-form" class="hidden rounded-full bg-brand-orange px-5 py-2.5 text-sm font-bold text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-orange-600 md:inline-flex">Send an inquiry <span class="ml-2">↗</span></a>
+      <button id="menuBtn" class="rounded-lg border border-white/20 p-2 text-xl md:hidden" aria-label="Open menu" aria-expanded="false">☰</button>
+    </nav>
+    <div id="mobileMenu" class="hidden border-t border-white/10 bg-brand-deep px-5 pb-5 md:hidden">
+      <div class="flex flex-col gap-4 pt-4 text-sm font-medium">
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="internship.html">Internship</a><a href="contact.html" class="text-brand-orange">Contact</a>
+        <a href="#contact-form" class="mt-1 rounded-full bg-brand-orange px-5 py-3 text-center font-bold">Send an inquiry ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="relative isolate overflow-hidden bg-brand-deep pb-24 pt-36 text-white lg:pb-28 lg:pt-44">
+      <div class="hero-grid absolute inset-0 -z-20 opacity-70"></div>
+      <div class="orb absolute -right-32 -top-10 -z-10 h-[520px] w-[520px] rounded-full"></div>
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="reveal max-w-3xl">
+          <div class="mb-7 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[.06] px-4 py-2 text-xs font-semibold tracking-wide text-slate-200"><span class="h-2 w-2 rounded-full bg-brand-orange"></span> LET'S START A CONVERSATION</div>
+          <h1 class="text-5xl font-extrabold leading-[1.08] tracking-tight sm:text-6xl lg:text-7xl">Tell us what<br><span class="text-brand-orange">you're building.</span></h1>
+          <p class="mt-7 max-w-2xl text-lg leading-8 text-slate-300">Have a project, a question or an idea you'd like to explore? Share a few details and let's work out a practical next step.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact form + information -->
+    <section class="py-20 lg:py-28">
+      <div class="mx-auto grid max-w-7xl gap-10 px-5 lg:grid-cols-[.78fr_1.22fr] lg:px-8">
+        <aside class="reveal">
+          <p class="text-xs font-extrabold tracking-[.22em] text-brand-orange">GET IN TOUCH</p>
+          <h2 class="mt-4 text-4xl font-extrabold tracking-tight text-brand-navy">Let's talk about <span class="text-brand-orange">your idea.</span></h2>
+          <p class="mt-5 leading-8 text-slate-500">Tell us what you need help with. A clear brief helps us understand your goals and respond with relevant next steps.</p>
+
+          <div class="mt-9 space-y-4">
+            <div class="flex gap-4 rounded-2xl border border-slate-200 p-5">
+              <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-pale text-xl text-brand-orange">✉</div>
+              <div><p class="font-bold text-brand-navy">Email</p><p class="mt-1 text-sm text-slate-500">Add your official business email before publishing.</p></div>
+            </div>
+            <div class="flex gap-4 rounded-2xl border border-slate-200 p-5">
+              <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-pale text-xl text-brand-orange">◉</div>
+              <div><p class="font-bold text-brand-navy">WhatsApp</p><p class="mt-1 text-sm text-slate-500">Start a direct conversation about your requirement.</p></div>
+            </div>
+            <div class="flex gap-4 rounded-2xl border border-slate-200 p-5">
+              <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-pale text-xl text-brand-orange">⌖</div>
+              <div><p class="font-bold text-brand-navy">Working mode</p><p class="mt-1 text-sm text-slate-500">Remote communication and project discussions.</p></div>
+            </div>
+          </div>
+
+          <a id="whatsappCta" href="#" class="mt-7 inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#159B57] px-6 py-4 font-bold text-white transition hover:-translate-y-1 hover:bg-[#11864b]">
+            <span class="text-xl">◉</span> Chat with us on WhatsApp <span>↗</span>
+          </a>
+          <p id="whatsappHint" class="mt-3 text-xs leading-5 text-slate-400">WhatsApp contact number must be configured in contact.js before publishing.</p>
+        </aside>
+
+        <div id="contact-form" class="reveal rounded-[2rem] border border-slate-200 bg-white p-6 shadow-[0_20px_70px_rgba(7,27,58,.08)] sm:p-9">
+          <div class="mb-8">
+            <p class="text-xs font-extrabold tracking-[.22em] text-brand-orange">PROJECT INQUIRY</p>
+            <h2 class="mt-3 text-2xl font-extrabold text-brand-navy">Send us a message</h2>
+            <p class="mt-2 text-sm leading-6 text-slate-500">Fill in the details below. Submitting opens WhatsApp with your message ready to send.</p>
+          </div>
+
+          <form id="inquiryForm" class="space-y-5">
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div><label for="name" class="mb-2 block text-sm font-bold text-brand-navy">Full name <span class="text-brand-orange">*</span></label><input class="field" id="name" name="name" type="text" placeholder="Your name" autocomplete="name" required minlength="2"></div>
+              <div><label for="email" class="mb-2 block text-sm font-bold text-brand-navy">Email address <span class="text-brand-orange">*</span></label><input class="field" id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required></div>
+            </div>
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div><label for="phone" class="mb-2 block text-sm font-bold text-brand-navy">Phone / WhatsApp</label><input class="field" id="phone" name="phone" type="tel" placeholder="+91 00000 00000" autocomplete="tel"></div>
+              <div><label for="service" class="mb-2 block text-sm font-bold text-brand-navy">Service interested in <span class="text-brand-orange">*</span></label>
+                <select class="field" id="service" name="service" required>
+                  <option value="">Select a service</option>
+                  <option>Website Development</option><option>Custom Software Development</option><option>UI / UX Design</option><option>Internship & Technical Training</option><option>Other / Not sure yet</option>
+                </select>
+              </div>
+            </div>
+            <div><label for="subject" class="mb-2 block text-sm font-bold text-brand-navy">Subject</label><input class="field" id="subject" name="subject" type="text" placeholder="What is this about?"></div>
+            <div><label for="message" class="mb-2 block text-sm font-bold text-brand-navy">Tell us about your requirement <span class="text-brand-orange">*</span></label><textarea class="field min-h-36 resize-y" id="message" name="message" placeholder="A short description of your project, goals or question..." required minlength="10"></textarea></div>
+            <div class="flex items-start gap-3"><input id="consent" name="consent" type="checkbox" required class="mt-1 h-4 w-4 accent-[#FF710A]"><label for="consent" class="text-xs leading-5 text-slate-500">I agree to share these details with Tehrpuriya Tech so the team can respond to my inquiry.</label></div>
+            <button type="submit" class="inline-flex w-full items-center justify-center gap-3 rounded-full bg-brand-orange px-7 py-4 font-bold text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-orange-600">Continue to WhatsApp <span>↗</span></button>
+            <p id="formStatus" class="hidden rounded-xl bg-brand-pale p-4 text-sm leading-6 text-brand-navy" role="status" aria-live="polite"></p>
+            <p class="text-center text-xs leading-5 text-slate-400">Your message is not stored on this website. WhatsApp opens so you can review and send it.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="bg-slate-50 py-20 lg:py-24">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="reveal mx-auto max-w-2xl text-center"><p class="text-xs font-extrabold tracking-[.22em] text-brand-orange">BEFORE YOU REACH OUT</p><h2 class="mt-4 text-4xl font-extrabold tracking-tight text-brand-navy">A few useful <span class="text-brand-orange">details.</span></h2></div>
+        <div class="mx-auto mt-12 grid max-w-4xl gap-4 md:grid-cols-2">
+          <div class="reveal rounded-2xl border border-slate-200 bg-white p-6"><h3 class="font-extrabold text-brand-navy">What should I include?</h3><p class="mt-2 text-sm leading-7 text-slate-500">Your goal, required features, expected timeline and any reference links you already have.</p></div>
+          <div class="reveal rounded-2xl border border-slate-200 bg-white p-6"><h3 class="font-extrabold text-brand-navy">Can I ask about an internship?</h3><p class="mt-2 text-sm leading-7 text-slate-500">Yes. Choose Internship & Technical Training in the form and include your learning goals.</p></div>
+          <div class="reveal rounded-2xl border border-slate-200 bg-white p-6"><h3 class="font-extrabold text-brand-navy">Do you work remotely?</h3><p class="mt-2 text-sm leading-7 text-slate-500">The website is set up to present remote communication and project discussions.</p></div>
+          <div class="reveal rounded-2xl border border-slate-200 bg-white p-6"><h3 class="font-extrabold text-brand-navy">When will I hear back?</h3><p class="mt-2 text-sm leading-7 text-slate-500">A response timeframe should be confirmed by the team and published here once you have set a reliable service commitment.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[#041329] text-white">
+    <div class="mx-auto grid max-w-7xl gap-12 px-5 py-14 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr] lg:px-8">
+      <div><div class="flex items-center gap-3"><img src="assets/logo.png" alt="" class="h-11 w-11 rounded-lg bg-white object-contain p-1" onerror="this.style.display='none'"><span class="brand-font text-lg font-extrabold">Tehrpuriya <span class="text-brand-orange">Tech</span></span></div><p class="mt-5 max-w-sm text-sm leading-7 text-slate-400">IT solutions, software development and web experiences built with purpose.</p></div>
+      <div><h3 class="font-bold">Explore</h3><div class="mt-5 flex flex-col gap-3 text-sm text-slate-400"><a class="hover:text-brand-orange" href="index.html">Home</a><a class="hover:text-brand-orange" href="about.html">About</a><a class="hover:text-brand-orange" href="services.html">Services</a><a class="hover:text-brand-orange" href="internship.html">Internship</a><a class="hover:text-brand-orange" href="contact.html">Contact</a></div></div>
+      <div><h3 class="font-bold">Get in touch</h3><p class="mt-5 text-sm leading-7 text-slate-400">Have a project or question?<br><a href="#contact-form" class="font-semibold text-brand-orange">Send an inquiry ↗</a></p></div>
+    </div>
+    <div class="border-t border-white/10"><div class="mx-auto flex max-w-7xl flex-col gap-2 px-5 py-5 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between lg:px-8"><span>© <span id="year"></span> Tehrpuriya Tech. All rights reserved.</span><span>Built with purpose. Powered by technology.</span></div></div>
+  </footer>
+  <script src="script.js"></script>
+  <script src="contact.js"></script>
+</body>
+</html>

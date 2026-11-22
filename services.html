@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore web development, custom software, UI/UX design and technology training services from Tehrpuriya Tech." />
+  <title>Our Services | Tehrpuriya Tech</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { navy: '#071B3A', deep: '#041329', orange: '#FF710A', pale: '#FFF2E8' }
+          },
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          boxShadow: { glow: '0 20px 70px rgba(255,113,10,.18)' }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; }
+    h1,h2,h3,.brand-font { font-family: 'Manrope', sans-serif; }
+    .hero-grid { background-image: linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px); background-size: 54px 54px; }
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .orb { background: radial-gradient(circle, rgba(255,113,10,.22), rgba(255,113,10,0) 68%); }
+  </style>
+</head>
+<body class="bg-white text-slate-800 antialiased">
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-brand-deep/95 text-white backdrop-blur-xl">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-3.5 lg:px-8">
+      <a href="index.html" class="flex items-center gap-3" aria-label="Tehrpuriya Tech home">
+        <img src="assets/logo.png" alt="Tehrpuriya Tech logo" class="h-12 w-12 rounded-xl bg-white object-contain p-1" onerror="this.style.display='none'">
+        <span class="brand-font text-lg font-extrabold tracking-tight">Tehrpuriya <span class="text-brand-orange">Tech</span></span>
+      </a>
+      <div class="hidden items-center gap-8 text-sm font-medium text-slate-200 md:flex">
+        <a class="transition hover:text-brand-orange" href="index.html">Home</a>
+        <a class="transition hover:text-brand-orange" href="about.html">About</a>
+        <a class="text-brand-orange" href="services.html">Services</a>
+        <a class="nav-link" href="internship.html">Internship</a>
+        <a class="transition hover:text-brand-orange" href="contact.html">Contact</a>
+      </div>
+      <a href="contact.html" class="hidden rounded-full bg-brand-orange px-5 py-2.5 text-sm font-bold text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-orange-600 md:inline-flex">Let's Talk <span class="ml-2">↗</span></a>
+      <button id="menuBtn" class="rounded-lg border border-white/20 p-2 text-xl md:hidden" aria-label="Open menu" aria-expanded="false">☰</button>
+    </nav>
+    <div id="mobileMenu" class="hidden border-t border-white/10 bg-brand-deep px-5 pb-5 md:hidden">
+      <div class="flex flex-col gap-4 pt-4 text-sm font-medium">
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html" class="text-brand-orange">Services</a><a href="contact.html">Contact</a>
+        <a href="contact.html" class="mt-1 rounded-full bg-brand-orange px-5 py-3 text-center font-bold">Let's Talk ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="relative isolate overflow-hidden bg-brand-deep pb-24 pt-36 text-white lg:pb-28 lg:pt-44">
+      <div class="hero-grid absolute inset-0 -z-20 opacity-70"></div>
+      <div class="orb absolute -right-32 -top-10 -z-10 h-[520px] w-[520px] rounded-full"></div>
+      <div class="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[1.1fr_.9fr] lg:items-end lg:px-8">
+        <div class="reveal">
+          <div class="mb-7 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[.06] px-4 py-2 text-xs font-semibold tracking-wide text-slate-200"><span class="h-2 w-2 rounded-full bg-brand-orange"></span> WHAT WE CAN HELP YOU BUILD</div>
+          <h1 class="text-5xl font-extrabold leading-[1.08] tracking-tight sm:text-6xl lg:text-7xl">Technology services.<br><span class="text-brand-orange">Thoughtfully delivered.</span></h1>
+          <p class="mt-7 max-w-2xl text-lg leading-8 text-slate-300">From your first website to custom digital tools, we focus on practical solutions that support real goals and create a better experience for the people who use them.</p>
+          <div class="mt-9 flex flex-wrap gap-4">
+            <a href="#service-list" class="inline-flex rounded-full bg-brand-orange px-7 py-4 font-bold text-white shadow-glow transition hover:-translate-y-1 hover:bg-orange-600">Explore services ↘</a>
+            <a href="contact.html" class="inline-flex rounded-full border border-white/25 px-7 py-4 font-bold text-white transition hover:border-brand-orange hover:text-brand-orange">Discuss a project</a>
+          </div>
+        </div>
+        <div class="reveal rounded-[2rem] border border-white/15 bg-white/[.06] p-7 backdrop-blur-xl sm:p-9">
+          <p class="text-xs font-extrabold tracking-[.2em] text-brand-orange">OUR SERVICE PROMISE</p>
+          <p class="mt-5 text-3xl font-extrabold leading-snug">Clear thinking.<br>Clean execution.<br><span class="text-brand-orange">Useful outcomes.</span></p>
+          <div class="mt-8 space-y-4 border-t border-white/10 pt-6 text-sm text-slate-300">
+            <p class="flex gap-3"><span class="text-brand-orange">✦</span> Understand the requirement before recommending tools</p>
+            <p class="flex gap-3"><span class="text-brand-orange">✦</span> Keep usability and maintainability in focus</p>
+            <p class="flex gap-3"><span class="text-brand-orange">✦</span> Communicate scope and deliverables clearly</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="service-list" class="py-24 lg:py-28">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="reveal flex flex-col justify-between gap-6 md:flex-row md:items-end">
+          <div><p class="text-xs font-extrabold tracking-[.22em] text-brand-orange">OUR CAPABILITIES</p><h2 class="mt-4 text-4xl font-extrabold tracking-tight text-brand-navy sm:text-5xl">What we <span class="text-brand-orange">do.</span></h2></div>
+          <p class="max-w-lg leading-7 text-slate-500">Choose the support that fits your current stage. We can shape the scope around your actual requirements.</p>
+        </div>
+
+        <div class="mt-14 grid gap-5 md:grid-cols-2">
+          <article class="reveal group rounded-3xl border border-slate-200 bg-white p-8 transition duration-300 hover:-translate-y-1 hover:border-brand-orange/40 hover:shadow-xl sm:p-9">
+            <div class="flex items-start justify-between"><div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-pale text-2xl text-brand-orange">⌘</div><span class="text-sm font-bold text-slate-300">01</span></div>
+            <h3 class="mt-7 text-2xl font-extrabold text-brand-navy">Website Development</h3>
+            <p class="mt-3 leading-7 text-slate-500">Responsive business websites and landing pages that communicate your brand clearly and work across devices.</p>
+            <div class="mt-6 flex flex-wrap gap-2"><span class="rounded-full bg-slate-100 px-3 py-1.5 text-xs font-semibold text-slate-600">Business websites</span><span class="rounded-full bg-slate-100 px-3 py-1.5 text-xs font-semibold text-slate-600">Landing pages</span><span class="rounded-full bg-slate-100 px-3 py-1.5 text-xs font-semibold text-slate-600">Responsive design</span></div>
+            <a href="contact.html" class="mt-8 inline-flex font-bold text-brand-orange">Discuss a website ↗</a>
+          </article>
+
+          <article class="reveal group rounded-3xl border border-slate-200 bg-white p-8 transition duration-300 hover:-translate-y-1 hover:border-brand-orange/40 hover:shadow-xl sm:p-9">
+            <div class="flex items-start justify-between"><div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-pale text-2xl text-brand-orange">▣</div><span class="text-sm font-bold text-slate-300">02</span></div>
+            <h3 class="mt-7 text-2xl font-extrabold text-brand-navy">Custom Software Development</h3>
+            <p class="mt-3 leading-7 text-slate-500">Purpose-built web applications and management tools designed around your workflows, users and business requirements.</p>
+            <div class="mt-6 flex flex-wrap gap-2"><span class="rounded-full bg-slate-100 px-3 py-1.5 text-xs font-semibold text-slate-600">Admin dashboards</span><span class="rounded-full bg-slate-100 px-3 py-1.5 text-xs font-semibold text-slate-600">Workflow tools</span><span class="rounded-full bg-slate-100 px-3 py-1.5 text-xs font-semibold text-slate-600">Database-driven apps</span></div>
+            <a href="contact.html" class="mt-8 inline-flex font-bold text-brand-orange">Discuss a solution ↗</a>
+          </article>
+
+          <article class="reveal group rounded-3xl border border-slate-200 bg-white p-8 transition duration-300 hover:-translate-y-1 hover:border-brand-orange/40 hover:shadow-xl sm:p-9">
+            <div class="flex items-start justify-between"><div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-pale text-2xl text-brand-orange">✧</div><span class="text-sm font-bold text-slate-300">03</span></div>
+            <h3 class="mt-7 text-2xl font-extrabold text-brand-navy">UI / UX & Interface Design</h3>
+            <p class="mt-3 leading-7 text-slate-500">Clean layouts and intuitive user journeys that make digital products easier to understand and use.</p>
+            <div class="mt-6 flex flex-wrap gap-2"><span class="rounded-full bg-slate-100 px-3 py-1.5 text-xs font-semibold text-slate-600">Wireframes</span><span class="rounded-full bg-slate-100 px-3 py-1.5 text-xs font-semibold text-slate-600">Web interfaces</span><span class="rounded-full bg-slate-100 px-3 py-1.5 text-xs font-semibold text-slate-600">Usability</span></div>
+            <a href="contact.html" class="mt-8 inline-flex font-bold text-brand-orange">Discuss a design ↗</a>
+          </article>
+
+          <article class="reveal group rounded-3xl border border-slate-200 bg-white p-8 transition duration-300 hover:-translate-y-1 hover:border-brand-orange/40 hover:shadow-xl sm:p-9">
+            <div class="flex items-start justify-between"><div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-pale text-2xl text-brand-orange">⌘</div><span class="text-sm font-bold text-slate-300">04</span></div>
+            <h3 class="mt-7 text-2xl font-extrabold text-brand-navy">Internship & Technical Training</h3>
+            <p class="mt-3 leading-7 text-slate-500">Structured learning opportunities and guided practical exercises for learners building foundational web development skills.</p>
+            <div class="mt-6 flex flex-wrap gap-2"><span class="rounded-full bg-slate-100 px-3 py-1.5 text-xs font-semibold text-slate-600">HTML & CSS</span><span class="rounded-full bg-slate-100 px-3 py-1.5 text-xs font-semibold text-slate-600">JavaScript</span><span class="rounded-full bg-slate-100 px-3 py-1.5 text-xs font-semibold text-slate-600">Project practice</span></div>
+            <a href="contact.html" class="mt-8 inline-flex font-bold text-brand-orange">Ask about training ↗</a>
+          </article>
+        </div>
+        <p class="mt-6 text-xs leading-6 text-slate-400">Service availability, project scope and training terms are confirmed individually before work begins.</p>
+      </div>
+    </section>
+
+    <!-- Tech stack -->
+    <section class="bg-slate-50 py-24 lg:py-28">
+      <div class="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[.85fr_1.15fr] lg:items-center lg:px-8">
+        <div class="reveal">
+          <p class="text-xs font-extrabold tracking-[.22em] text-brand-orange">TOOLS & TECHNOLOGIES</p>
+          <h2 class="mt-4 text-4xl font-extrabold tracking-tight text-brand-navy sm:text-5xl">The right tool for <span class="text-brand-orange">the right job.</span></h2>
+          <p class="mt-6 leading-8 text-slate-500">Technology choices should follow the project requirements—not the other way around. These are some of the tools and technologies relevant to our work and learning programs.</p>
+        </div>
+        <div class="reveal grid grid-cols-2 gap-3 sm:grid-cols-3">
+          <div class="rounded-2xl border border-slate-200 bg-white p-5"><p class="text-xs text-slate-400">01</p><p class="mt-3 font-extrabold text-brand-navy">HTML5</p><p class="mt-1 text-xs text-slate-500">Structure</p></div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-5"><p class="text-xs text-slate-400">02</p><p class="mt-3 font-extrabold text-brand-navy">CSS / Tailwind</p><p class="mt-1 text-xs text-slate-500">Styling</p></div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-5"><p class="text-xs text-slate-400">03</p><p class="mt-3 font-extrabold text-brand-navy">JavaScript</p><p class="mt-1 text-xs text-slate-500">Interactivity</p></div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-5"><p class="text-xs text-slate-400">04</p><p class="mt-3 font-extrabold text-brand-navy">Python</p><p class="mt-1 text-xs text-slate-500">Backend logic</p></div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-5"><p class="text-xs text-slate-400">05</p><p class="mt-3 font-extrabold text-brand-navy">Django</p><p class="mt-1 text-xs text-slate-500">Web framework</p></div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-5"><p class="text-xs text-slate-400">06</p><p class="mt-3 font-extrabold text-brand-navy">React</p><p class="mt-1 text-xs text-slate-500">Frontend library</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="py-24 lg:py-28">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="reveal mx-auto max-w-2xl text-center"><p class="text-xs font-extrabold tracking-[.22em] text-brand-orange">HOW WE WORK</p><h2 class="mt-4 text-4xl font-extrabold tracking-tight text-brand-navy sm:text-5xl">From conversation<br>to <span class="text-brand-orange">delivery.</span></h2></div>
+        <div class="mt-14 grid gap-6 md:grid-cols-4">
+          <div class="reveal text-center"><div class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-pale text-xl font-extrabold text-brand-orange">01</div><h3 class="mt-5 font-extrabold text-brand-navy">Understand</h3><p class="mt-2 text-sm leading-6 text-slate-500">Discuss goals, users, constraints and expectations.</p></div>
+          <div class="reveal text-center"><div class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-pale text-xl font-extrabold text-brand-orange">02</div><h3 class="mt-5 font-extrabold text-brand-navy">Define</h3><p class="mt-2 text-sm leading-6 text-slate-500">Agree on scope, approach, timeline and deliverables.</p></div>
+          <div class="reveal text-center"><div class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-pale text-xl font-extrabold text-brand-orange">03</div><h3 class="mt-5 font-extrabold text-brand-navy">Develop</h3><p class="mt-2 text-sm leading-6 text-slate-500">Build, review and refine the agreed solution.</p></div>
+          <div class="reveal text-center"><div class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-pale text-xl font-extrabold text-brand-orange">04</div><h3 class="mt-5 font-extrabold text-brand-navy">Deliver</h3><p class="mt-2 text-sm leading-6 text-slate-500">Hand over the work and discuss the next steps.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="px-5 pb-20 lg:px-8">
+      <div class="reveal relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-brand-navy px-7 py-16 text-center text-white sm:px-14">
+        <div class="orb absolute -right-20 -top-40 h-96 w-96 rounded-full"></div>
+        <p class="relative text-xs font-extrabold tracking-[.22em] text-brand-orange">HAVE A PROJECT IN MIND?</p>
+        <h2 class="relative mx-auto mt-5 max-w-3xl text-4xl font-extrabold tracking-tight sm:text-5xl">Let's find the right <span class="text-brand-orange">solution.</span></h2>
+        <p class="relative mx-auto mt-5 max-w-xl leading-7 text-slate-300">Share your requirements. We'll discuss the scope and a practical way forward.</p>
+        <a href="contact.html" class="relative mt-9 inline-flex rounded-full bg-brand-orange px-8 py-4 font-bold text-white transition hover:-translate-y-1 hover:bg-orange-600">Start a conversation ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[#041329] text-white">
+    <div class="mx-auto grid max-w-7xl gap-12 px-5 py-14 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr] lg:px-8">
+      <div><div class="flex items-center gap-3"><img src="assets/logo.png" alt="" class="h-11 w-11 rounded-lg bg-white object-contain p-1" onerror="this.style.display='none'"><span class="brand-font text-lg font-extrabold">Tehrpuriya <span class="text-brand-orange">Tech</span></span></div><p class="mt-5 max-w-sm text-sm leading-7 text-slate-400">IT solutions, software development and web experiences built with purpose.</p></div>
+      <div><h3 class="font-bold">Explore</h3><div class="mt-5 flex flex-col gap-3 text-sm text-slate-400"><a class="hover:text-brand-orange" href="index.html">Home</a><a class="hover:text-brand-orange" href="about.html">About</a><a class="hover:text-brand-orange" href="services.html">Services</a><a class="hover:text-brand-orange" href="internship.html">Internship</a><a class="hover:text-brand-orange" href="contact.html">Contact</a></div></div>
+      <div><h3 class="font-bold">Get in touch</h3><p class="mt-5 text-sm leading-7 text-slate-400">Have a project or question?<br><a href="contact.html" class="font-semibold text-brand-orange">Connect with our team ↗</a></p></div>
+    </div>
+    <div class="border-t border-white/10"><div class="mx-auto flex max-w-7xl flex-col gap-2 px-5 py-5 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between lg:px-8"><span>© <span id="year"></span> Tehrpuriya Tech. All rights reserved.</span><span>Built with purpose. Powered by technology.</span></div></div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
